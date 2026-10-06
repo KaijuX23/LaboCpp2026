@@ -14,10 +14,10 @@ public:
 
     void setCode(int c);
     void setTitle(const char* t);
-    int getCode();
-    char* getTitle();
+    int getCode() const;
+    const char* getTitle() const;
 
-    void display();
+    void display() const;
 };
 
 #endif
