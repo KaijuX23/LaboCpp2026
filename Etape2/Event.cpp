@@ -8,7 +8,6 @@ namespace planning {
     int Event::currentCode = 1;
 
     Event::Event() {
-        code = currentCode++;
         title = new char[strlen("default") + 1];
         strcpy(title, "default");
         timing = nullptr;
@@ -17,7 +16,6 @@ namespace planning {
 
     Event::Event(int c, const char* t) {
         code = c;
-        currentCode = c + 1;
         title = new char[strlen(t) + 1];
         strcpy(title, t);
         timing = nullptr;
