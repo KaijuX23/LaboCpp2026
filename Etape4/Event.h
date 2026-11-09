@@ -4,7 +4,7 @@
 
 namespace planning {
     class Event {
-    private:
+    protected:
         int code;
         char* title;
         Timing* timing;
@@ -15,7 +15,7 @@ namespace planning {
         Event();
         Event(int c, const char* t);
         Event(const Event& e);
-        ~Event();
+        virtual ~Event();
 
         void setCode(int c);
         void setTitle(const char* t);
@@ -25,7 +25,7 @@ namespace planning {
         const char* getTitle() const;
         Timing getTiming() const;
 
-        void display() const;
+        virtual void display() const;
     };
 }
 #endif

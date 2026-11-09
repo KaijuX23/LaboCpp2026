@@ -11,7 +11,6 @@ namespace planning {
         title = new char[strlen("default") + 1];
         strcpy(title, "default");
         timing = nullptr;
-        cout << "--- Trace : constructeur par defaut" << endl;
     }
 
     Event::Event(int c, const char* t) {
@@ -19,7 +18,6 @@ namespace planning {
         title = new char[strlen(t) + 1];
         strcpy(title, t);
         timing = nullptr;
-        cout << "--- Trace : constructeur d'initialisation" << endl;
     }
 
     Event::Event(const Event& e) {
@@ -32,7 +30,6 @@ namespace planning {
         } else {
             timing = nullptr;
         }
-        cout << "--- Trace : constructeur de copie" << endl;
     }
 
     Event::~Event() {
@@ -40,7 +37,6 @@ namespace planning {
         if (timing != nullptr) {
             delete timing;
         }
-        cout << "--- Trace : destructeur" << endl;
     }
 
     void Event::setCode(int c) {

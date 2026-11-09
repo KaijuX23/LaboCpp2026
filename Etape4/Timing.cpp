@@ -14,18 +14,14 @@ namespace planning {
 
     Timing::Timing() {
         day = MONDAY;
-        cout << "--- Trace : Constructeur par defaut Timing" << endl;
     }
     Timing::Timing(string d, const Time& s, const Time& dur) : start(s), duration(dur) {
         day = d;
-        cout << "--- Trace : Constructeur d'init Timing" << endl;
     }
     Timing::Timing(const Timing& t) : start(t.start), duration(t.duration) {
         day = t.day;
-        cout << "--- Trace : Constructeur de copie Timing" << endl;
     }
     Timing::~Timing() {
-        cout << "--- Trace : Destructeur Timing" << endl;
     }
 
     void Timing::setDay(string d) { day = d; }

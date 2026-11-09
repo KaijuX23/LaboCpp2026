@@ -1,8 +1,8 @@
-Test3: Test3.o Event.o Time.o Timing.o
-	g++ -o Test3 Test3.o Event.o Time.o Timing.o
+Test4: Test4.o Event.o Time.o Timing.o Schedulable.o Professor.o Group.o Classroom.o
+	g++ -o Test4 Test4.o Event.o Time.o Timing.o Schedulable.o Professor.o Group.o Classroom.o
 
-Test3.o: Test3.cpp Event.h Time.h Timing.h
-	g++ -c Test3.cpp -o Test3.o
+Test4.o: Test4.cpp Event.h Time.h Timing.h Schedulable.h Professor.h Group.h Classroom.h
+	g++ -c Test4.cpp -o Test4.o
 
 Event.o: Event.cpp Event.h Timing.h
 	g++ -c Event.cpp -o Event.o
@@ -12,3 +12,15 @@ Time.o: Time.cpp Time.h
 
 Timing.o: Timing.cpp Timing.h Time.h
 	g++ -c Timing.cpp -o Timing.o
+
+Schedulable.o: Schedulable.cpp Schedulable.h
+	g++ -c Schedulable.cpp -o Schedulable.o
+
+Professor.o: Professor.cpp Professor.h Schedulable.h
+	g++ -c Professor.cpp -o Professor.o
+
+Group.o: Group.cpp Group.h Schedulable.h
+	g++ -c Group.cpp -o Group.o
+
+Classroom.o: Classroom.cpp Classroom.h Schedulable.h
+	g++ -c Classroom.cpp -o Classroom.o

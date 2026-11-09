@@ -7,25 +7,20 @@ namespace planning {
     Time::Time(){
         hour = 0;
         minute = 0;
-        cout << "--- Trace : Constructeur par defaut Time" << endl;
     }
     Time::Time(int h, int m) {
         hour = h;
         minute = m;
-        cout << "--- Trace : Constructeur d'init (h,m) Time" << endl;
     }
     Time::Time(int m) {
         hour = m / 60;
         minute = m % 60;
-        cout << "--- Trace : Constructeur d'init (m) Time" << endl;
     }
     Time::Time(const Time& t) {
         hour = t.hour;
         minute = t.minute;
-        cout << "--- Trace : Constructeur de copie Time" << endl;
     }
     Time::~Time() {
-        cout << "--- Trace : Destructeur Time" << endl;
     }
 
     void Time::setHour(int h) { hour = h; }
